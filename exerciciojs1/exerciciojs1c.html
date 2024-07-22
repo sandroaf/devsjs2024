@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do triplo - DOM</title>
+    <script language="JavaScript" src="funcoes.js"></script>
+</head>
+<body>
+    <label for="iValor">Informe um número:</label>
+    <input type="text" id="iValor" name="iValor">
+    <br>
+    <label for="iResultado">O triplo do número é:</label>
+    <input type="text" id="iResultado" name="iResultado" readonly>
+    <br>
+    <button onclick="document.getElementById('iResultado').value = Triplo(parseFloat(document.getElementById('iValor').value)) ">Calcular</button>
+</body>
+</html>
