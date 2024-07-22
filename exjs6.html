@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo evento onMouseOver</title>
+    <script>
+        function AlteraCorFundo(cor) {
+            console.log("Alterou para "+cor);
+            document.body.style.backgroundColor = cor; 
+        }
+        function RetornCorFundo() {
+            document.body.style.backgroundColor = 'white'; 
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td style="background-color: red; color: white;" onmouseover="AlteraCorFundo(this.style.backgroundColor)" onmouseout="RetornCorFundo()">
+                Vermelho
+            </td>
+            <td style="background-color: green; color: white" onmouseover="AlteraCorFundo(this.style.backgroundColor)" onmouseout="RetornCorFundo()">
+                Verde
+            </td>
+            <td style="background-color: blue; color: white;" onmouseover="AlteraCorFundo(this.style.backgroundColor)" onmouseout="RetornCorFundo()">
+                Azul
+            </td>
+        </tr>
+    </table>            
+    <img id="iImg" src="img/aerea-noturna-unidavi-rodape-site.jpg"
+    style="width: 90%;" ondblclick=";this.style.display = 'none';getElementById('bMostraImg').style.display='inline';">
+
+    <button id="bMostraImg" style="display: none;" onclick="document.getElementById('iImg').style.display='inline';this.style.display = 'none';">Mostra IMG</button>
+
+</body>
+</html>
