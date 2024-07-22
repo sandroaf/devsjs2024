@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilizando DOM</title>
+    <script language="JavaScript">
+        function Mostrar() {
+            let Nome = document.getElementById('iNome').value;
+            document.getElementById('pMostra').innerHTML = Nome;
+            document.getElementById('taNomes').value = Nome;
+            return null;
+        }
+
+       function Limpar() {
+        document.getElementById('pMostra').innerHTML = ""x;
+        document.getElementById('taNomes').value = "";
+       }
+
+    </script>
+</head>
+    <h1>Exemplo acesso elementos HTML com DOM</h1>
+    <br>
+    <label for="iNome">Nome: </label>
+    <input type="text" id="iNome" name="iNome" placeholder="Informe seu nome">
+    <button onclick="Mostrar()">Mostrar</button>&nbsp;
+    <button onclick="Limpar()">Limpar</button>
+
+    <p id="pMostra" style="color:blue;font-weight: bold;"></p>
+    <textarea id="taNomes"></textarea>
+</body>
+</html>

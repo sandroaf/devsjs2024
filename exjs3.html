@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo JS - Alert e Prompt</title>
+    <script language="JavaScript">
+        /*
+          Cria uma variável local, Nome e exibe uma caixa para entrada de valor.
+          window.prompt 
+        */
+        let Nome = window.prompt("Informe seu nome: ");
+
+        //Exibe caixa de mensagem de boas vindas utilizando o valor informado em Nome.
+        window.alert("Olá "+Nome);
+
+        //Escreve na página mensagem de boas vindas utilizando o valor informado em Nome.
+        document.write("Olá "+Nome);
+
+        valor = 30;
+        document.write("<br> Abaixo exemplo de escrita em tela com expressão artimética");
+        document.write("<br> Cálculo usando variável valor = "+valor+" ((10*10)+valor) :"+ ((10*10)+valor));
+
+        //Conversão de valores parseInt para Inteiro ou parseFloat para número com casa decimal
+        valora = parseFloat(window.prompt("Informa um valor a:"));
+        document.write("<br>" + valora + " + "+valora + " = "+(valora+valora));
+    </script>
+</head>
+<body>
+    <!-- Código HTML -->
+</body>
+</html>
