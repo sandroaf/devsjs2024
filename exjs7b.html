@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior de Idade</title>
+    <script>
+        function MaiorIdade(nome,idade) {
+            let MaiorMenor = ((idade < 18)?"menor":"maior");
+            /*if (idade < 18) {
+                MaiorMenor = 'menor';
+            } 
+            else 
+            {
+                MaiorMenor =  ('maior');
+            }*/
+
+            let frase = "Olá "+nome+" você é "+MaiorMenor+" de idade";
+            return frase;
+        }
+    </script>
+</head>
+<body>
+    <label for="iNome">Nome:</label>
+    <input type="text" id="iNome" name="iNome">
+    <br><br>
+    <label for="iIdade">Idade:</label>
+    <input type="text" id="iIdade" name="iIdade">
+    <br><br>
+    <button onclick="document.getElementById('pResultado').innerText = MaiorIdade(document.getElementById('iNome').value,document.getElementById('iIdade').value)">Verificar Idade</button>
+    <br>
+    <p id="pResultado"></p>
+</body>
+</html>

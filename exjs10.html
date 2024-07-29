@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo While</title>
+    <script>
+        function NumerodaSorte(maximo) {
+           return Math.trunc((Math.random()*maximo)+1)
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Exemplo While</h1>
+    <script>
+        maximo = window.prompt("Até que número sortear?");
+        let numero = NumerodaSorte(maximo);
+        document.write('<p>Acerte o número sorteado de 1 até '+maximo+'</p>');
+        console.log(numero);
+        palpites = 1;
+        n = window.prompt("Palpite "+palpites+": ?");
+        while (numero != n) {
+            console.log(n);
+            palpites++;
+            n = window.prompt("Palpite "+palpites+": ?");
+        }
+        document.write("Parabéns! Número "+numero+" correto, após "+palpites+" palpites")
+    </script>
+</body>
+</html>
