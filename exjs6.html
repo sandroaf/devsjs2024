@@ -14,7 +14,7 @@
         }
     </script>
 </head>
-<body>
+<body onload="alert('bem-vindo')">
     <table>
         <tr>
             <td style="background-color: red; color: white;" onmouseover="AlteraCorFundo(this.style.backgroundColor)" onmouseout="RetornCorFundo()">
@@ -32,6 +32,7 @@
     style="width: 90%;" ondblclick=";this.style.display = 'none';getElementById('bMostraImg').style.display='inline';">
 
     <button id="bMostraImg" style="display: none;" onclick="document.getElementById('iImg').style.display='inline';this.style.display = 'none';">Mostra IMG</button>
+    <button onclick="window.open(location.href)">Abrir Janela</button>
 
 </body>
 </html>
