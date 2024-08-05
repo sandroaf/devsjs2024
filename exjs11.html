@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de números intervalada</title>
+    <!--
+        Aplicação em JavaScript que solicite a informação de um número máximo até onde deve-se exibir uma sequência numérica, mostrando os número conforme um segundo valor informado. 
+        Exemplo. 
+        Número máximo da sequência: 100
+        Intervalo entre os números: 2
+        Resultado: 0,2,4,6,..,100 
+    -->
+    <script>
+        function intervalo(max, intervalo, resultado) {
+            let nmax = parseInt(document.getElementById(max).value);
+            let nintervalo = parseInt(document.getElementById(intervalo).value);
+            tresultado = '<strong>Listagem</strong><br>'
+            for (i=0;i<=nmax;i=i+nintervalo) {
+                tresultado = tresultado += i+',';
+            }
+            document.getElementById(resultado).innerHTML = tresultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Sequência de números intervalada</h1>
+    <label for="imax">Número máximo:</label>
+    <input type="text" name="imax" id="imax" size="4">
+    <br> 
+    <label for="iintervalo">Intervalo exibição:</label>
+    <input type="text" name="iintervalo" id="iintervalo" size="4">
+    <br>
+    <br>
+    <button onclick="intervalo('imax','iintervalo','presultado')">Listar</button>
+    <br>
+    <br>
+    <p id="presultado" name="presultado"></p>
+</body>
+</html>
