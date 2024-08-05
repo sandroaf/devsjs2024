@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Viagem</title>
+    <script src="..\geral.js"></script>
+    <script>
+        function calculaviagem() {
+            let viagem = document.getElementById('iviagem').value;
+            //console.log(viagem);
+            let kms = parseFloat(document.getElementById('ikmpercorrido').value);
+            //console.log(kms);
+            let litros = parseFloat(document.getElementById('ilitros').value);
+            //console.log(litros);
+            let valor = parseFloat(document.getElementById('ivalorlitro').value);
+            //console.log(valor);
+            let kmplitro = kms / litros;
+            //console.log(kmplitro);
+            let custoviagem = (litros * valor);
+            //console.log(custoviagem);
+            let valorpkm =  custoviagem / kms;
+            //console.log(valorpkm);
+
+            let resultado = 'Em sua viagem para '+viagem+' você percorreu '+kms+' kilometros e gastou '+litros+' litros de combustível.<br>Seu carro fez '+kmplitro+' KMs por litro e sua viagem teve um custo de R$ '+custoviagem+' sendo R$ '+valorpkm+' por kilometro.';
+
+            document.getElementById('presultado').innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Automia de Viagem</h1>
+    <br>
+    <br>
+    <label for="iviagem">Viagem: </label>
+    <input type="text" id="iviagem" name="iviagem"><small> (Informe o nome da viagem)</small>
+    <br>
+    <label for="ikmpercorrido">Km percorridos: </label>
+    <input type="text" id="ikmpercorrido" name="ikmpercorrido" onkeypress="virgulaponto(this)" onchange="ehnumero(this)"><small> (Informe os KMs percorridos na viagem)</small>
+    <br>
+    <label for="ilitros">Litros de combustível: </label>
+    <input type="text" id="ilitros" name="ilitros" onkeypress="virgulaponto(this)" onchange="ehnumero(this)"><small> (Informe quantos litros de combustível gastos)</small>
+    <br>
+    <label for="ivalorlitro">Valor do litro: </label>
+    <input type="text" id="ivalorlitro" name="ivalorlitro" onkeypress="virgulaponto(this)" onchange="ehnumero(this)"><small> (Informe o valor do litro do combustível)</small>
+    <br><br>
+    <button onclick="calculaviagem()">Calcular viagem</button>
+    <br>
+    <hr>
+    <p id="presultado"></p>
+</body>
+</html>
