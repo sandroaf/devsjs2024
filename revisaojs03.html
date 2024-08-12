@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão acessando dados de INPUT</title>
+    <script>
+        function calculaArea() {
+            let largura = parseFloat(document.getElementById('ilargura').value);
+            let altura = parseFloat(document.getElementsByName('ialtura')[0].value);
+            document.querySelector('#iarea').value = (largura * altura);
+        }
+    </script>
+</head>
+<body>
+    <label for="ilargura">Largura: </label>
+    <input type="text" name="ilargura" id="ilargura">
+    <br>
+    <label for="ialtura">Altura: </label>
+    <input type="text" name="ialtura" id="ialtura">
+    <br>
+    <label for="iarea">Área: </label>
+    <input type="text" name="iarea" id="iarea" readonly>
+    <br><br>
+    <button onclick="calculaArea()">Calcular Área</button>
+</body>
+</html>
