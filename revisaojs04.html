@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+        janela = null;
+        function calcula(operacao) {
+            let resultado = 0;
+            let v1 = parseFloat(document.getElementById('ivl1').value);
+            let v2 = parseFloat(document.getElementById('ivl2').value);
+            console.log(operacao);
+            if (operacao == '+' ) {
+                resultado = (v1 + v2);
+            } else if (operacao == '-') {
+                resultado = (v1 - v2);
+            } else if (operacao == '*') {
+                resultado = (v1 * v2);
+            } else {
+                resultado = (v1 / v2); //divisão
+            }
+            if (janela == null) {
+                janela = window.open("", "jresultado", "width=300,height=100,top=100,left=100"); //cria um nova guia
+                janela.document.title = "Resultado";
+                janela.document.write("<button onclick='window.close()'>Fechar</button><br>");
+            }
+            janela.document.write(resultado+"<br>");
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <fieldset>
+        <legend>Valores</legend>
+        <label for="ivl1">1:</label>
+        <input type="text" size="5" id="ivl1">&nbsp;
+        <label for="ivl2">2:</label>
+        <input type="text" size="5" id="ivl2">
+        <br>
+        <br>
+        <button onclick="calcula(this.innerText)">+</button>&nbsp;
+        <button onclick="calcula(this.innerText)">-</button>&nbsp;
+        <button onclick="calcula(this.innerText)">*</button>&nbsp;
+        <button onclick="calcula(this.innerText)">/</button>
+    </fieldset>
+</body>
+</html>
