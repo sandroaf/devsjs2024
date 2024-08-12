@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuadas listagem</title>
+    <script>
+        function tabuada() {
+            const ate = parseInt(document.getElementById('iate').value);
+            const dtabuada = document.querySelector('#dtabuada');
+            for (vtabuada=1;vtabuada<=ate;vtabuada++) {
+                dtabuada.innerHTML += "<h3>Tabuada de "+vtabuada+"</h3>";
+                for (vnum=0;vnum<=10;vnum++) {
+                    dtabuada.innerHTML += vnum+" x "+vtabuada+" = "+(vnum*vtabuada)+"<br>";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Tabuadas - listagem</h1>
+    <label for="inumero">Até tabuada: </label>
+    <input type="text" size="3" id="iate" name="iate"> 
+    <br><br>
+    <button onclick="tabuada()">Exibir tabuada</button>
+    <br><br>
+    <div id="dtabuada"></div>
+</body>
+</html>

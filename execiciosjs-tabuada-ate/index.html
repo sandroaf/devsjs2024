@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Simples</title>
+    <script>
+        function tabuada() {
+            const numero = parseInt(document.getElementById('inumero').value);
+            const ate = parseInt(document.getElementById('iate').value);
+            const dtabuada = document.querySelector('#dtabuada');
+            for (i=1;i<=ate;i++) {
+                dtabuada.innerHTML += i+" x "+numero+" = "+(i*numero)+"<br>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Tabuada simpla - 1 a até</h1>
+    <label for="inumero">Número: </label>
+    <input type="text" size="3" id="inumero" name="inumero"> 
+    <label for="iate">até: </label>
+    <input type="text" size="3" id="iate" name="iate">
+    <br><br>
+    <button onclick="tabuada()">Exibir tabuada</button>
+    <br><br>
+    <div id="dtabuada"></div>
+</body>
+</html>
