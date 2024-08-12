@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JS - Inserindo JS no código</title>
+</head>
+<body>
+    <!-- Inserção de script dentro do próprio HTML -->
+    <script language="JavaScript">
+        let nome = "";
+        nome = window.prompt("Qual seu nome?");
+        document.write("<textarea>"+nome+"</textarea>");
+    </script>
+
+    <!-- Insersão de JavaScript no onClick do botaão, isso é
+     diretamente dentro do atributo/evento de uma TAG HTML -->
+    <button onclick="document.querySelector('#dNumero').innerHTML = document.querySelector('textarea').value.length">Contar Caracteres</button>
+    <button onclick="document.querySelector('textarea').value = ''">Limpar</button>
+    <div id="dNumero"></div>
+</body>
+</html>
